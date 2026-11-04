@@ -1,57 +1,146 @@
 @import "tailwindcss";
 
 :root {
-  --cream: #fbf6ea;
-  --navy: #102a43;
-  --navy-deep: #0a1c30;
-  --ocean: #1f5fa8;
-  --ocean-light: #7ec4ec;
-  --orange: #e8601c;
-  --gold: #c9a227;
+  --ink: #0a1c30;
+  --page: #dff3fb;
+  --paper: #ffffff;
+  --yellow: #ffd23f;
+  --red: #e8401c;
+  --cyan: #3fb6e8;
+  --blue: #1f5fa8;
 }
 
 @theme inline {
-  --color-cream: var(--cream);
-  --color-navy: var(--navy);
-  --color-navy-deep: var(--navy-deep);
-  --color-ocean: var(--ocean);
-  --color-ocean-light: var(--ocean-light);
-  --color-orange: var(--orange);
-  --color-gold: var(--gold);
+  --color-ink: var(--ink);
+  --color-page: var(--page);
+  --color-paper: var(--paper);
+  --color-yellow: var(--yellow);
+  --color-red: var(--red);
+  --color-cyan: var(--cyan);
+  --color-blue: var(--blue);
   --font-display: var(--font-luckiest-guy);
-  --font-sans: var(--font-poppins);
+  --font-sans: var(--font-comic-neue);
 }
 
 body {
-  background: var(--cream);
-  color: var(--navy);
-  font-family: var(--font-poppins), ui-sans-serif, sans-serif;
+  color: var(--ink);
+  font-family: var(--font-comic-neue), ui-sans-serif, sans-serif;
+  font-weight: 700;
+  background-color: var(--page);
+  background-image: radial-gradient(rgba(31, 95, 168, 0.18) 1.5px, transparent 1.6px);
+  background-size: 14px 14px;
 }
 
-/* bold outlined headline type, echoing the logo's lettering */
-.badge-text {
-  -webkit-text-stroke: 2px var(--navy);
-  paint-order: stroke fill;
-  text-shadow: 3px 3px 0 var(--navy);
+:focus-visible {
+  outline: 3px dashed var(--red);
+  outline-offset: 3px;
 }
 
-.wave-band {
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.12) 0px,
-      rgba(255, 255, 255, 0.12) 2px,
-      transparent 2px,
-      transparent 34px
+/* in the components layer so Tailwind utilities (bg-*, p-*) can override them */
+@layer components {
+  /* a comic panel: heavy ink border and a hard offset shadow */
+  .panel {
+    border: 4px solid var(--ink);
+    background: var(--paper);
+    box-shadow: 6px 6px 0 var(--ink);
+  }
+
+  /* Ben-Day dots over whatever background color the element has */
+  .halftone {
+    background-image: radial-gradient(rgba(10, 28, 48, 0.22) 2px, transparent 2.2px);
+    background-size: 12px 12px;
+  }
+
+  .halftone-burst {
+    background-image: radial-gradient(circle at center, rgba(232, 64, 28, 0.55) 0, rgba(232, 64, 28, 0) 65%),
+      radial-gradient(rgba(232, 64, 28, 0.45) 3px, transparent 3.3px);
+    background-size: 100% 100%, 14px 14px;
+  }
+
+  /* narrator caption box */
+  .caption {
+    display: inline-block;
+    border: 3px solid var(--ink);
+    background: var(--yellow);
+    padding: 0.35rem 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  /* speech balloon with a tail at the lower left */
+  .balloon {
+    position: relative;
+    border: 3px solid var(--ink);
+    border-radius: 999px / 70%;
+    background: var(--paper);
+    padding: 1.25rem 2rem;
+  }
+  .balloon::after {
+    content: "";
+    position: absolute;
+    left: 18%;
+    bottom: -22px;
+    width: 26px;
+    height: 24px;
+    background: var(--paper);
+    border-right: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    transform: skewX(-25deg);
+  }
+  .balloon::before {
+    /* covers the balloon's own border where the tail joins */
+    content: "";
+    position: absolute;
+    left: calc(18% + 3px);
+    bottom: -3px;
+    width: 22px;
+    height: 6px;
+    background: var(--paper);
+    z-index: 1;
+  }
+
+  /* outlined sound-effect lettering */
+  .sfx {
+    -webkit-text-stroke: 3px var(--ink);
+    paint-order: stroke fill;
+    text-shadow: 5px 5px 0 var(--ink);
+    letter-spacing: 0.02em;
+  }
+
+  /* jagged starburst for the one big action moment */
+  .burst {
+    clip-path: polygon(
+      50% 0%, 59% 18%, 76% 6%, 74% 26%, 96% 22%, 84% 40%, 100% 52%,
+      82% 60%, 92% 80%, 71% 76%, 66% 98%, 52% 82%, 38% 100%, 34% 78%,
+      12% 86%, 20% 64%, 0% 54%, 18% 42%, 6% 22%, 27% 26%, 26% 4%, 42% 18%
     );
+  }
+
+  /* chunky pressable button; it sinks into its shadow when clicked */
+  .btn {
+    display: inline-block;
+    border: 3px solid var(--ink);
+    box-shadow: 4px 4px 0 var(--ink);
+    padding: 0.7rem 1.5rem;
+    font-family: var(--font-luckiest-guy), sans-serif;
+    font-size: 1.15rem;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    transition: transform 80ms ease, box-shadow 80ms ease;
+  }
+  .btn:hover {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 var(--ink);
+  }
+  .btn:active {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 var(--ink);
+  }
 }
 
-.torn-bottom {
-  clip-path: polygon(
-    0% 0%, 100% 0%, 100% 92%,
-    96% 100%, 90% 90%, 84% 100%, 78% 91%, 72% 100%,
-    66% 90%, 60% 100%, 54% 91%, 48% 100%, 42% 90%,
-    36% 100%, 30% 91%, 24% 100%, 18% 90%, 12% 100%,
-    6% 91%, 0% 100%
-  );
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: none;
+  }
 }

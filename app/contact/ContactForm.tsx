@@ -19,7 +19,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="mt-6 space-y-5">
       <div>
-        <label htmlFor="name" className="block text-sm font-bold text-navy">
+        <label htmlFor="name" className="block font-display tracking-wide">
           Name
         </label>
         <input
@@ -28,11 +28,11 @@ export default function ContactForm() {
           required
           value={name}
           onChange={(event) => setName(event.target.value)}
-          className="mt-1 w-full border-0 border-b-2 border-navy/30 bg-transparent px-1 py-2 text-navy outline-none focus:border-orange"
+          className="mt-1 w-full border-3 border-ink bg-paper px-3 py-2 font-normal outline-none focus:bg-yellow/30 focus:shadow-[4px_4px_0_var(--ink)]"
         />
       </div>
       <div>
-        <label htmlFor="email" className="block text-sm font-bold text-navy">
+        <label htmlFor="email" className="block font-display tracking-wide">
           Email
         </label>
         <input
@@ -41,11 +41,11 @@ export default function ContactForm() {
           required
           value={email}
           onChange={(event) => setEmail(event.target.value)}
-          className="mt-1 w-full border-0 border-b-2 border-navy/30 bg-transparent px-1 py-2 text-navy outline-none focus:border-orange"
+          className="mt-1 w-full border-3 border-ink bg-paper px-3 py-2 font-normal outline-none focus:bg-yellow/30 focus:shadow-[4px_4px_0_var(--ink)]"
         />
       </div>
       <div>
-        <label htmlFor="message" className="block text-sm font-bold text-navy">
+        <label htmlFor="message" className="block font-display tracking-wide">
           Message
         </label>
         <textarea
@@ -54,16 +54,16 @@ export default function ContactForm() {
           rows={5}
           value={message}
           onChange={(event) => setMessage(event.target.value)}
-          className="mt-1 w-full border-2 border-navy/30 bg-transparent px-3 py-2 text-navy outline-none focus:border-orange"
+          className="mt-1 w-full border-3 border-ink bg-paper px-3 py-2 font-normal outline-none focus:bg-yellow/30 focus:shadow-[4px_4px_0_var(--ink)]"
         />
       </div>
       <button
         type="submit"
-        className="rounded-full bg-orange px-6 py-3 font-bold text-cream shadow-md transition-transform hover:-translate-y-0.5"
+        className="btn bg-red text-paper"
       >
         Send It
       </button>
-      <p className="text-xs text-navy/50">
+      <p className="text-sm font-normal">
         Opens your email app with this pre-filled to {BAKERY_EMAIL}.
       </p>
     </form>

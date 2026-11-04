@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Luckiest_Guy, Poppins } from "next/font/google";
+import { Comic_Neue, Luckiest_Guy } from "next/font/google";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import "./globals.css";
@@ -10,9 +10,9 @@ const luckiestGuy = Luckiest_Guy({
   subsets: ["latin"],
 });
 
-const poppins = Poppins({
-  variable: "--font-poppins",
-  weight: ["400", "500", "600", "700"],
+const comicNeue = Comic_Neue({
+  variable: "--font-comic-neue",
+  weight: ["400", "700"],
   subsets: ["latin"],
 });
 
@@ -30,9 +30,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${luckiestGuy.variable} ${poppins.variable} h-full antialiased`}
+      className={`${luckiestGuy.variable} ${comicNeue.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col bg-cream text-navy">
+      <body className="flex min-h-full flex-col">
         <NavBar />
         <main className="flex-1">{children}</main>
         <Footer />
