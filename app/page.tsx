@@ -36,35 +36,29 @@ export default function Home() {
         <p className="caption text-sm sm:text-base">
           Meanwhile, in Riverton, Ohio…
         </p>
-        <div className="mt-8 grid items-center gap-10 md:grid-cols-[auto_1fr]">
-          <div className="burst mx-auto flex h-80 w-80 items-center justify-center bg-red sm:h-[26rem] sm:w-[26rem]">
+        <h1 className="sr-only">Chaos Confections</h1>
+        <div className="mt-6 flex flex-col items-center text-center">
+          <div className="flex w-full max-w-[26rem] items-center justify-center sm:max-w-[40rem]">
             <Image
-              src="/logo.jpg"
+              src="/logo-cutout.png"
               alt="Chaos Confections badge logo: a chef holding a whisk, flanked by lightning bolts over ocean waves"
-              width={256}
-              height={256}
-              className="h-auto w-48 -rotate-6 rounded-full border-4 border-ink sm:w-64"
+              width={1300}
+              height={1299}
+              className="h-auto w-[74%]"
               priority
             />
           </div>
-          <div className="text-center md:text-left">
-            <h1 className="sfx -rotate-2 font-display text-6xl leading-[0.95] text-red sm:text-7xl">
-              Chaos
-              <br />
-              Confections!
-            </h1>
-            <div className="balloon mt-8 max-w-md text-lg md:ml-4">
-              Beautifully unhinged baked goods. We stack it too high, frost it
-              too fast, and bake it fresh anyway — every single day.
-            </div>
-            <div className="mt-12 flex flex-wrap justify-center gap-4 md:justify-start">
-              <Link href="/gallery" className="btn bg-red text-paper">
-                See the gallery
-              </Link>
-              <Link href="/contact" className="btn bg-paper text-ink">
-                Order a cake
-              </Link>
-            </div>
+          <div className="balloon mt-8 max-w-md text-lg">
+            Beautifully unhinged baked goods. We stack it too high, frost it
+            too fast, and bake it fresh anyway — every single day.
+          </div>
+          <div className="mt-12 flex flex-wrap justify-center gap-4">
+            <Link href="/gallery" className="btn bg-red text-paper">
+              See the gallery
+            </Link>
+            <Link href="/contact" className="btn bg-paper text-ink">
+              Order a cake
+            </Link>
           </div>
         </div>
       </section>
