@@ -4,49 +4,43 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Gallery | Chaos Confections",
-  description: "Cookies, cakes, cupcakes, and pastries fresh out of the Chaos Confections kitchen.",
+  description: "Wedding cakes, birthday cakes, sugar work, and bakes from the Chaos Confections kitchen.",
 };
 
 type Photo = {
   title: string;
-  caption: string;
-  // path under /public, e.g. "/gallery/pile-up.jpg"; leave unset to show a placeholder
-  src?: string;
-  panel: string;
+  // path under /public
+  src: string;
 };
 
 const photos: Photo[] = [
-  {
-    title: "The Pile-Up",
-    caption: "Brown-butter chocolate chip, finished with too much sea salt.",
-    panel: "bg-yellow sm:col-span-2 lg:col-span-4 aspect-[16/10]",
-  },
-  {
-    title: "Chocolate Fudge Cake",
-    caption: "Fudge frosting, zero restraint.",
-    panel: "bg-cyan lg:col-span-2 aspect-[4/5] lg:aspect-auto",
-  },
-  {
-    title: "Cupcakes by the dozen",
-    caption: "Frosted a little too high on purpose.",
-    panel: "bg-red lg:col-span-2 aspect-square",
-  },
-  {
-    title: "Almond Croissant",
-    caption: "Laminated past the point of reason.",
-    panel: "bg-paper lg:col-span-2 aspect-square",
-  },
-  {
-    title: "Seasonal Fruit Tart",
-    caption: "Whatever's ripe, piled on uneven.",
-    panel: "bg-yellow lg:col-span-2 aspect-square",
-  },
-  {
-    title: "Celebration Cakes",
-    caption: "Tell us the occasion — we'll design the chaos together.",
-    panel: "bg-blue sm:col-span-2 lg:col-span-6 aspect-[16/10] lg:aspect-[3/1]",
-  },
+  { title: "Four-tier wedding cake", src: "/gallery/wedding-four-tier.jpg" },
+  { title: "Black and white rose tiers", src: "/gallery/black-white-rose-tiers.jpg" },
+  { title: "Pink patterned tiers", src: "/gallery/pink-patterned-tiers.jpg" },
+  { title: "Peach blossom tiers", src: "/gallery/peach-blossom-tiers.jpg" },
+  { title: "Giant rainbow slice", src: "/gallery/rainbow-slice.jpg" },
+  { title: "Royal icing gazebo", src: "/gallery/royal-icing-gazebo.jpg" },
+  { title: "Robot birthday cake", src: "/gallery/robot-birthday.jpg" },
+  { title: "Soccer birthday cake", src: "/gallery/soccer-birthday.jpg" },
+  { title: "Block-head birthday cake", src: "/gallery/block-head-birthday.jpg" },
+  { title: "Cowgirl first birthday", src: "/gallery/cowgirl-first-birthday.jpg" },
+  { title: "Art deco 70th birthday", src: "/gallery/art-deco-70th.jpg" },
+  { title: "Twin birthday sheet cake", src: "/gallery/twin-birthday-sheet.jpg" },
+  { title: "Weightlifter cake", src: "/gallery/weightlifter.jpg" },
+  { title: "Shark cake", src: "/gallery/shark.jpg" },
+  { title: "Cartoon face cake", src: "/gallery/cartoon-face.jpg" },
+  { title: "40th birthday cake", src: "/gallery/fortieth-birthday.jpg" },
+  { title: "Evergreen showpiece", src: "/gallery/evergreen-showpiece.jpg" },
+  { title: "Sage cameo cake", src: "/gallery/sage-cameo.jpg" },
+  { title: "Sugar flower wreath", src: "/gallery/sugar-flower-wreath.jpg" },
+  { title: "Sugar rose", src: "/gallery/sugar-rose.jpg" },
+  { title: "Piped royal icing", src: "/gallery/piped-royal-icing.jpg" },
+  { title: "Coconut layer cake", src: "/gallery/coconut-layer.jpg" },
+  { title: "Fresh-baked cookies", src: "/gallery/cookies.jpg" },
+  { title: "Loaf cakes", src: "/gallery/loaf-cakes.jpg" },
 ];
+
+const panelColors = ["bg-yellow", "bg-cyan", "bg-red", "bg-blue"];
 
 export default function GalleryPage() {
   return (
@@ -59,27 +53,23 @@ export default function GalleryPage() {
         in-house, in small batches, every day.
       </p>
 
-      <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
-        {photos.map((photo) => (
-          <figure key={photo.title} className={`panel halftone relative overflow-hidden ${photo.panel}`}>
-            {photo.src ? (
+      <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-4">
+        {photos.map((photo, i) => (
+          <figure
+            key={photo.src}
+            className={`panel halftone flex flex-col overflow-hidden ${panelColors[i % panelColors.length]}`}
+          >
+            <div className="relative aspect-square">
               <Image
                 src={photo.src}
-                alt={`${photo.title}: ${photo.caption}`}
+                alt={photo.title}
                 fill
-                sizes="(min-width: 1024px) 66vw, (min-width: 640px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
                 className="object-cover"
               />
-            ) : (
-              <div className="absolute inset-0 flex items-center justify-center p-6">
-                <span className="border-3 border-dashed border-ink bg-paper px-4 py-2 text-center">
-                  Photo coming soon
-                </span>
-              </div>
-            )}
-            <figcaption className="absolute bottom-0 left-0 right-0 border-t-4 border-ink bg-paper px-4 py-2">
-              <span className="font-display text-lg tracking-wide">{photo.title}</span>
-              <span className="block font-normal">{photo.caption}</span>
+            </div>
+            <figcaption className="flex-1 border-t-4 border-ink bg-paper px-3 py-2 font-display text-sm tracking-wide sm:text-base">
+              {photo.title}
             </figcaption>
           </figure>
         ))}
