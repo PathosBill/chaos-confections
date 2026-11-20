@@ -4,7 +4,7 @@ import SocialBadges from "@/components/SocialBadges";
 export default function Footer() {
   return (
     <footer className="mt-16 border-t-4 border-ink bg-blue text-paper">
-      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-10 sm:grid-cols-3">
+      <div className="mx-auto grid max-w-6xl gap-8 px-6 py-10 sm:grid-cols-2">
         <div className="flex items-start gap-3">
           <Image
             src="/logo.jpg"
@@ -29,12 +29,6 @@ export default function Footer() {
           <p className="font-display text-lg tracking-wide text-yellow">Located in</p>
           <p className="mt-2">Crestview</p>
           <p>Austin, TX</p>
-        </div>
-        <div>
-          <p className="font-display text-lg tracking-wide text-yellow">Hours</p>
-          <p className="mt-2">Tue–Fri: 7am – 5pm</p>
-          <p>Sat: 8am – 3pm</p>
-          <p>Sun–Mon: Closed</p>
         </div>
       </div>
       <div className="border-t-4 border-ink bg-ink px-6 py-3 text-center text-sm text-paper/80">

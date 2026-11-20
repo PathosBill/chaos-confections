@@ -119,21 +119,11 @@ export default function AboutPage() {
         <Squiggle color="blue" />
         <h2 className="font-display text-3xl">Visit the bakery</h2>
       </div>
-      <div className="panel mt-6 grid gap-6 bg-paper p-6 text-lg sm:grid-cols-2">
+      <div className="panel mt-6 bg-paper p-6 text-lg">
         <div>
           <h3 className="font-display tracking-wide text-red">Address</h3>
           <p className="mt-1">Crestview</p>
           <p>Austin, TX</p>
-        </div>
-        <div>
-          <h3 className="font-display tracking-wide text-red">Hours</h3>
-          <p className="mt-1">
-            Tue–Fri: 7am – 5pm
-            <br />
-            Sat: 8am – 3pm
-            <br />
-            Sun–Mon: Closed
-          </p>
         </div>
       </div>
     </div>
