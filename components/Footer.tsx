@@ -18,7 +18,7 @@ export default function Footer() {
               Chaos Confections
             </p>
             <p className="mt-2">
-              Wildly frosted, loudly flavored, baked fresh every morning.
+              A little chaos, a lotta YUM!
             </p>
             <div className="mt-4">
               <SocialBadges />
