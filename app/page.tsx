@@ -19,7 +19,7 @@ const featured = [
     name: "Baked Goods",
     panel: "bg-yellow halftone lg:col-span-2",
     description:
-      "A little bit of everything from the oven, baked fresh and made to order. Ask what's on the menu, or tell us what you're craving.",
+      "A little bit of everything - from shortbread to meringues - baked fresh and made to order. Just tell us what you're craving and we'll make it happen.",
   },
   {
     name: "Cake Breads",
