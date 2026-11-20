@@ -27,7 +27,8 @@ export default function Footer() {
         </div>
         <div>
           <p className="font-display text-lg tracking-wide text-yellow">Located in</p>
-          <p className="mt-2">Crestview, Austin, TX</p>
+          <p className="mt-2">Crestview</p>
+          <p>Austin, TX</p>
         </div>
         <div>
           <p className="font-display text-lg tracking-wide text-yellow">Hours</p>

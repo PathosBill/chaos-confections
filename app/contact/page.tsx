@@ -36,7 +36,11 @@ export default function ContactPage() {
               </div>
               <div>
                 <dt className="font-bold">Address</dt>
-                <dd>Crestview, Austin, TX</dd>
+                <dd>
+                  Crestview
+                  <br />
+                  Austin, TX
+                </dd>
               </div>
               <div>
                 <dt className="font-bold">Hours</dt>
