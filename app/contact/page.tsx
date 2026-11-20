@@ -19,8 +19,8 @@ export default function ContactPage() {
         Get in Touch
       </h1>
       <p className="balloon mt-6 max-w-xl text-lg">
-        Questions, custom cake orders, or catering requests — tear off a
-        number and call, or just send a message below.
+        Questions, custom cake orders, and all other requests - just call or
+        send a message below.
       </p>
 
       <div className="panel mt-14">
