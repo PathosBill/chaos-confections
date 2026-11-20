@@ -19,7 +19,7 @@ const comicNeue = Comic_Neue({
 export const metadata: Metadata = {
   title: "Chaos Confections",
   description:
-    "Beautifully unhinged cookies, cakes, and pastries, baked fresh daily in Austin, TX.",
+    "Beautifully unhinged cookies, cakes, and cake breads, baked fresh daily in Austin, TX.",
 };
 
 export const viewport: Viewport = {
