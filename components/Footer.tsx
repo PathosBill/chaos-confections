@@ -26,9 +26,8 @@ export default function Footer() {
           </div>
         </div>
         <div>
-          <p className="font-display text-lg tracking-wide text-yellow">Find us</p>
-          <p className="mt-2">214 Maple Street</p>
-          <p>Riverton, OH 44101</p>
+          <p className="font-display text-lg tracking-wide text-yellow">Located in</p>
+          <p className="mt-2">Crestview, Austin, TX</p>
         </div>
         <div>
           <p className="font-display text-lg tracking-wide text-yellow">Hours</p>

@@ -34,7 +34,7 @@ export default function Home() {
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
       <section className="panel halftone-burst relative mt-8 overflow-hidden bg-yellow px-5 pb-12 pt-5 sm:px-10 sm:pb-16">
         <p className="caption text-sm sm:text-base">
-          Meanwhile, in Riverton, Ohio…
+          Meanwhile, in Austin, Texas…
         </p>
         <h1 className="sr-only">Chaos Confections</h1>
         <div className="mt-6 flex flex-col items-center text-center">
