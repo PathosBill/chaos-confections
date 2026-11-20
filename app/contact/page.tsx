@@ -11,8 +11,6 @@ const PHONE_LINK = "tel:+16144486191";
 const EMAIL = "chaosconfectionsatx@gmail.com";
 
 export default function ContactPage() {
-  const tabCount = 8;
-
   return (
     <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
       <h1 className="sfx -rotate-1 font-display text-5xl text-red sm:text-7xl">
@@ -59,21 +57,6 @@ export default function ContactPage() {
             <h2 className="caption bg-cyan font-display text-xl normal-case">Send a message</h2>
             <ContactForm />
           </div>
-        </div>
-
-        <div className="halftone flex border-t-4 border-dashed border-ink bg-yellow">
-          {Array.from({ length: tabCount }).map((_, i) => (
-            <div
-              key={i}
-              className={`flex flex-1 items-center justify-center py-3 ${
-                i > 0 ? "border-l-2 border-dashed border-ink" : ""
-              }`}
-            >
-              <span className="rotate-90 whitespace-nowrap text-[11px] font-bold tracking-wide text-ink">
-                {PHONE}
-              </span>
-            </div>
-          ))}
         </div>
       </div>
     </div>
