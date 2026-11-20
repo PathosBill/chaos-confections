@@ -42,16 +42,6 @@ export default function ContactPage() {
                   Austin, TX
                 </dd>
               </div>
-              <div>
-                <dt className="font-bold">Hours</dt>
-                <dd>
-                  Tue–Fri: 7am – 5pm
-                  <br />
-                  Sat: 8am – 3pm
-                  <br />
-                  Sun–Mon: Closed
-                </dd>
-              </div>
             </dl>
           </div>
 
