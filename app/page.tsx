@@ -22,10 +22,10 @@ const featured = [
       "A rotating flavor lineup, frosted a little too high on purpose. By the dozen, no two swirled quite alike.",
   },
   {
-    name: "Pastries",
+    name: "Cake Breads",
     panel: "bg-paper lg:col-span-4",
     description:
-      "Croissants laminated past the point of reason. Scones with whatever's ripe that week, folded in heavy-handed.",
+      "Banana, zucchini, lemon, and whatever else is ripe, baked into tall loaves and sliced thick. Moist, dense, and gone by morning.",
   },
 ];
 
