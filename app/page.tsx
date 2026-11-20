@@ -13,7 +13,7 @@ const featured = [
     name: "Cakes",
     panel: "bg-cyan halftone lg:col-span-2",
     description:
-      "Lopsided layers, drips that run where they want to. We build them tall and let gravity have a say.",
+      "Custom from start to finish. Let your imagination run a bit wild and we'll take care of the rest!",
   },
   {
     name: "Cupcakes",
