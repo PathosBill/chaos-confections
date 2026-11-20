@@ -36,7 +36,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <dt className="font-bold">Address</dt>
-                <dd>214 Maple Street, Riverton, OH 44101</dd>
+                <dd>Crestview, Austin, TX</dd>
               </div>
               <div>
                 <dt className="font-bold">Hours</dt>

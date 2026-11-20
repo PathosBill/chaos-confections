@@ -122,7 +122,7 @@ export default function AboutPage() {
       <div className="panel mt-6 grid gap-6 bg-paper p-6 text-lg sm:grid-cols-2">
         <div>
           <h3 className="font-display tracking-wide text-red">Address</h3>
-          <p className="mt-1">214 Maple Street, Riverton, OH 44101</p>
+          <p className="mt-1">Crestview, Austin, TX</p>
         </div>
         <div>
           <h3 className="font-display tracking-wide text-red">Hours</h3>
