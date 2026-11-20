@@ -7,7 +7,7 @@ const featured = [
     name: "Cookies",
     panel: "bg-paper lg:col-span-4",
     description:
-      "Stuffed, stacked, and never baked the same way twice. Brown-butter chocolate chip is the one people fight over.",
+      "Traditional or custom flavors. We make sure that each bite keeps you coming back for more.",
   },
   {
     name: "Cakes & Cupcakes",
