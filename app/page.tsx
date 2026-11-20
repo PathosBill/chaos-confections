@@ -25,7 +25,7 @@ const featured = [
     name: "Cake Breads",
     panel: "bg-paper lg:col-span-4",
     description:
-      "Banana, zucchini, lemon, and whatever else is ripe, baked into tall loaves and sliced thick. Moist, dense, and gone by morning.",
+      "Banana, lemon, pumpkin, and whatever else is ripe - perfectly baked into loaves, moist and delicious from end to end. It's sure to be gone by morning!",
   },
 ];
 
