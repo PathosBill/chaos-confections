@@ -16,10 +16,10 @@ const featured = [
       "Custom from start to finish. Let your imagination run a bit wild and we'll take care of the rest!",
   },
   {
-    name: "Cupcakes",
+    name: "Baked Goods",
     panel: "bg-yellow halftone lg:col-span-2",
     description:
-      "A rotating flavor lineup, frosted a little too high on purpose. By the dozen, no two swirled quite alike.",
+      "A little bit of everything from the oven, baked fresh and made to order. Ask what's on the menu, or tell us what you're craving.",
   },
   {
     name: "Cake Breads",
