@@ -6,7 +6,9 @@ export const metadata: Metadata = {
   description: "Get in touch with Chaos Confections for orders and questions.",
 };
 
-const PHONE = "(555) 012-3456";
+const PHONE = "(614) 448-6191";
+const PHONE_LINK = "tel:+16144486191";
+const EMAIL = "chaosconfectionsatx@gmail.com";
 
 export default function ContactPage() {
   const tabCount = 8;
@@ -28,11 +30,19 @@ export default function ContactPage() {
             <dl className="mt-5 space-y-3 text-lg font-normal">
               <div>
                 <dt className="font-bold">Phone</dt>
-                <dd>{PHONE}</dd>
+                <dd>
+                  <a href={PHONE_LINK} className="underline decoration-2 underline-offset-4 hover:text-red">
+                    {PHONE}
+                  </a>
+                </dd>
               </div>
               <div>
                 <dt className="font-bold">Email</dt>
-                <dd>hello@chaosconfections.example</dd>
+                <dd className="break-all">
+                  <a href={`mailto:${EMAIL}`} className="underline decoration-2 underline-offset-4 hover:text-red">
+                    {EMAIL}
+                  </a>
+                </dd>
               </div>
               <div>
                 <dt className="font-bold">Address</dt>
